@@ -1,0 +1,99 @@
+body {
+    background-color: #E8ECED;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-image: url("images/christus.webp");
+    background-repeat: no-repeat;
+    background-size: 140% 100%;
+    background-position: center;
+    width: 85%;
+    height: auto;
+
+    border: 10px solid black;
+    margin: 5px auto;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    margin: 15px;
+}
+
+.first_presidency-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
+    padding: 0px 250px;
+    align-items: center;
+}
+.apostles-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    padding: 0px 310px 50px;
+    gap: 50px 0px;
+}
+
+.counselor {
+    height: 150px;
+    width: 150px;
+    border: 8px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    margin: 0 auto;
+}
+.counselor:hover {
+    border: 8px solid salmon;
+}
+.counselor  img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.apostle {
+    grid-column: span 2;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    border: 8px solid white;
+
+    margin: 0 auto;
+}
+.apostle:hover {
+    border: 8px solid salmon;
+}
+.elder-gong {
+    grid-column-end: 4;
+}
+.apostle img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.president {
+    border-radius: 50%;
+    width: 185px;
+    height: 185px;
+    border: 8px solid white;
+
+    margin: 0 auto;
+}
+.president:hover {
+    border: 8px solid lightblue;
+}
+.president img{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+/* Insert styles here, this is called an internal stylesheet  */
+body {
+    background: #FFECD7;
+    font-family: Helvetica, sans-serif;
+}
+
+section {
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    background-color: #008DB1;
+    border: solid #004e64;
+    border-radius: 15px;
+}
+
+img {
+    border: solid white;
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    font-size: 38px;
+}
+
+ul {
+    margin: 16px 0px 16px -70px;
+}
+
+ul li {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+}
+
+a {
+    color: #91E4FB;
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+p {
+    color: #FFD783;
+    font-family: "Nanum Brush Script", cursive;
+
+    font-size: 22px;
+    text-align: center;
+}
