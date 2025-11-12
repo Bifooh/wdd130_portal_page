@@ -6,6 +6,7 @@
     <title>SamP | Portal Page</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.js">
 </head>
 <body>
     <header>
@@ -20,11 +21,19 @@
     </header>
     <nav>
         <img src="img/miniLOGO.png" alt="logo">
-        <ul>
+        <ul class="pc-menu">
             <li><a href="#about">About me</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="hambg-menu">
+        <i class="fa-solid fa-bars"></i>
+        <ul class="phone-list">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </div>
     </nav>
     <main id="about">
         <h1 class="aboutmetitle">About Me</h1>
@@ -40,7 +49,7 @@
                 <img src="images/running.jpg"></img>
             </section>
             <section class="big block">
-                <h1>I'm single</h1>
+                <h1>My Family</h1>
                 <p>I have twin sisters (They're 2 years younger than me, I'm the older kid). My parents live in Provo, Utah and the rest of my family is scattered around the world in countries like Brazil, Germany and Venezuela.</p>
                 <img src="images/family.jpg"></img>
                 <img src="images/fam-2.jpg"></img>
@@ -87,8 +96,6 @@
         </div>
     </footer>
 
-    <!-- <div class="back-top-btn">
-        <i class="fa-solid fa-arrow-up"></i>
-    </div> -->
+    <script src="main.js"></script>
 </body>
 </html>

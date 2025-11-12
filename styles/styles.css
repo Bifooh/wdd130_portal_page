@@ -13,9 +13,11 @@
     --dark-brown: #33310D;
     --light-background: #CDCCB5;
 
-    --standard-size: 18px;
-    --heading-size: 60px;
-    --second-heading-size: 45px;
+
+    --heading: 60px;
+    --medium-heading: 45px;
+    --small-heading: 28px;
+    --paragraph: 18px;
 }
 html {
       scroll-behavior: smooth;
@@ -24,7 +26,36 @@ body {
     margin: 0;
     font-family: "Varela Round", sans-serif;
 }
-
+.hambg-menu{
+    display: none;
+    padding: 20px 30px;
+}
+.phone-list {
+    display: none;
+    text-decoration: none;
+    max-width: fit-content;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(-50%, 50%);
+    padding: 15px;
+    background-color: white;
+    border-radius: 25px;
+}
+.phone-list li {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 15px;
+    font-size:var(--paragraph);
+}
+.phone-list li a {
+    text-decoration: none;
+    color: var(--dark-text);
+}
+.hambg-menu:active .phone-list{
+    display: block;
+}
 nav {
     width: 100%;
     display: flex;   
@@ -33,6 +64,7 @@ nav {
     top: 0;
     position: fixed;
     background-color: #fbfcfb82;
+    backdrop-filter: blur(40px);
 }
 nav img {
     max-width: 60px;
@@ -42,23 +74,23 @@ nav img {
 nav img:hover {
     transform: scale(1.08);
 }
-ul {
+.pc-menu {
     text-decoration: none;
     margin: 0 15px;
 }
-li {
+.pc-menu li {
     display: inline-block;
     padding: 10px 20px;
     margin: 0 5px;
     border-radius: 15px;
-    font-size:var(--standard-size);
+    font-size:var(--paragraph);
 }
-li:hover {
+.pc-menu li:hover {
     background-color: var(--light-background);
     color: var(--dark-brown);
     transform: scale(1.03);
 }
-li a {
+.pc-menu li a {
     text-decoration: none;
     color: var(--dark-text)
 }
@@ -81,12 +113,11 @@ header {
     z-index: 0;
 }
 .herotitle {
-    font-size: var(--heading-size);
+    font-size: var(--heading);
     font-family: "Varela", sans-serif;
     font-weight: 100;
     margin: 28% 2rem 3rem;
     text-align: center;
-    /* max-height: 80px; */
     color: var(--dark-text);
 }
 .herotitle span {
@@ -102,7 +133,7 @@ header {
     width: fit-content;
     height: fit-content;
     font-weight: 100;
-    font-size: var(--standard-size);
+    font-size: var(--paragraph);
     margin: 0 10px;
 }
 .pbtn:hover {
@@ -118,7 +149,7 @@ header {
     width: fit-content;
     height: fit-content;
     font-weight: 100;
-    font-size: var(--standard-size);
+    font-size: var(--paragraph);
     margin: 0 10px;
 }
 .sbtn:hover {
@@ -131,7 +162,7 @@ header {
     margin: 3rem 0;
     padding-top: 6rem;
     text-align: center;
-    font-size: var(--heading-size);
+    font-size: var(--heading);
     font-weight: 100;
     color: var(--dark-text);
 }
@@ -160,14 +191,14 @@ header {
 .block h1 {
     margin: 0;
     font-weight: 100;
-    font-size: var(--second-heading-size);
+    font-size: var(--medium-heading);
     align-self: center;
     color: var(--dark-brown);
 }
 .block p {
     margin: 0;
     padding: 2% 5%;
-    font-size: var(--standard-size);
+    font-size: var(--paragraph);
     color: var(--dark-text);
 }
 .block img {
@@ -186,14 +217,14 @@ header {
     border-left: 5px solid grey;
 }
 #quote h2 {
-    font-size: var(--second-heading-size);
+    font-size: var(--medium-heading);
     font-weight: 100;
     color: var(--dark-text);
     text-align: center;
     margin: 0;
 }
 #author-name {
-    font-size: 25px;
+    font-size: var(--small-heading);
     color: var(--dark-text);
     text-align: center;
     margin: 20px 0 0;
@@ -201,7 +232,7 @@ header {
 }
 #author-description {
     text-align: center;
-    font-size: 15px;
+    font-size: var(--paragraph);
     font-weight: 200;
     color: var(--dark-text);
     margin: 10px 0 0;
@@ -219,6 +250,7 @@ header {
     box-sizing: border-box;
     margin: 0 auto;
     height: fit-content;
+    justify-items: center;
 }
 .card {
     padding: 25px;
@@ -238,12 +270,12 @@ header {
     border-radius: 15px;
 }
 .card h3 {
-    font-size: 28px;
+    font-size: var(--small-heading);
     color: var(--dark-text);
     font-weight: 100;
 }
 .card p {
-    font-size: 16px;
+    font-size: var(--paragraph);
     color: var(--dark-text);
 }
 .card a {
@@ -280,7 +312,7 @@ header {
     gap: 15px;
 }
 .social i {
-    font-size: 25px;
+    font-size: var(--small-heading);
     color: var(--dark-accent);
 }
 .social i:hover {
@@ -291,32 +323,74 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .back-top-btn {
-    background-color: var(--dark-accent);
-    position: fixed;     
-    bottom: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    z-index: 1;
+@media screen and (max-width: 1550px) {
+    :root {
+        --heading: 45px;
+        --medium-heading: 35px;
+        --small-heading: 22px;
+        --paragraph: 18px;
+    }
 }
-.back-top-btn i {
-    font-size: 20px;
-    color: var(--accent);
-    text-align: center;
-} */
+
+@media screen and (max-width: 900px) {
+    :root {
+        --heading: 35px;
+        --medium-heading: 25px;
+        --small-heading: 18px;
+        --paragraph: 16px;
+    }
+
+    .herosection {
+        grid-template-columns: 1fr;
+        padding-bottom: 50px;
+    }
+    .herotitle {
+        margin: 10% 2rem 5%;
+    }
+    .aboutmetitle {
+        padding-top: 1rem;
+    }
+    .about-grid {
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+    .big{
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+    .gallery_grid {
+        grid-template-columns: minmax(250px, 1fr);
+    }
+    .flexcontainer{
+        flex-direction: column;
+    }
+    .copyright {
+        order: 3;
+    }
+    nav img {
+        max-width: 40px;
+        margin: 10px 20px;
+    }
+    .pc-menu {
+        display: none;
+    }
+    .hambg-menu{
+        display: block;
+    }
+    .phone-list {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+}
+
+@media screen and (max-width: 836px) {
+    .phone-list li{
+        display: block;
+    }
+    .phone-list {
+        top: 50%;
+        right: 15px;
+        transform: translate(0%, 15%);
+    }
+}
